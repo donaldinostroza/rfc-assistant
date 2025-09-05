@@ -17,6 +17,9 @@ jobs:
     # Especifica que el trabajo se ejecutará en una máquina virtual con la última versión de Ubuntu
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       # Paso 1: Clonar tu repositorio en la máquina virtual
       # Esto permite que el flujo de trabajo acceda a tu script y a la base de datos
