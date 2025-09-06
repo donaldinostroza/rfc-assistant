@@ -14,7 +14,7 @@ def create_html_page():
         
         # Use pandas to read data from a SQL query into a DataFrame
         # Querying the most recent 100 RFCs, ordered by closing date
-        query = "SELECT codigo_externo, nombre, estado, fecha_cierre, organismo_comprador FROM rfcs ORDER BY fecha_cierre DESC LIMIT 100"
+        query = "SELECT codigo_externo, nombre, estado, fecha_cierre FROM rfcs ORDER BY fecha_cierre DESC LIMIT 500"
         df = pd.read_sql_query(query, conn)
         
         # Close the connection
