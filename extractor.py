@@ -31,9 +31,8 @@ def setup_database():
         CREATE TABLE IF NOT EXISTS rfcs (
             codigo_externo TEXT PRIMARY KEY,
             nombre TEXT,
-            estado TEXT,
-            fecha_cierre TEXT,
-            organismo_comprador TEXT
+            estado INTEGER,
+            fecha_cierre TEXT
         )
     ''')
     conn.commit()
@@ -62,14 +61,13 @@ def save_rfcs(rfcs_list):
             # 'INSERT OR IGNORE' es una forma eficiente de manejar duplicados
             # basados en la PRIMARY KEY (codigo_externo).
             cursor.execute('''
-                INSERT OR IGNORE INTO rfcs (codigo_externo, nombre, estado, fecha_cierre, organismo_comprador)
-                VALUES (?, ?, ?, ?, ?)
+                INSERT OR IGNORE INTO rfcs (codigo_externo, nombre, estado, fecha_cierre)
+                VALUES (?, ?, ?, ?)
             ''', (
                 rfc.get('CodigoExterno'),
                 rfc.get('Nombre'),
-                rfc.get('Estado'),
-                rfc.get('FechaCierre'),
-                rfc.get('Comprador', {}).get('NombreOrganismo')
+                int(rfc.get('Estado')) if rfc.get('Estado') is not None else None,
+                rfc.get('FechaCierre')
             ))
             # cursor.rowcount será 1 si se insertó una nueva fila, 0 si se ignoró.
             if cursor.rowcount > 0:
