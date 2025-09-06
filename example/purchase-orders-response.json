@@ -1,0 +1,32 @@
+{
+    "Cantidad": 5,
+    "FechaCreacion": "2025-09-06T19:05:16.0274715Z",
+    "Version": "v1",
+    "Listado": [
+        {
+            "Codigo": "1002588-193-CM25",
+            "Nombre": "Adquisición de pasajes aéreos; SLEP Puerto Cordillera;Orden de Compra: 1002588-193-CM25",
+            "CodigoEstado": 12
+        },
+        {
+            "Codigo": "1002772-12390-SE25",
+            "Nombre": "CONTENCIONES TORACICAS CON/LLAVES 1002772-30-LR24 (LC, U.T.I Adulto, 2204005003,APG)",
+            "CodigoEstado": 12
+        },
+        {
+            "Codigo": "1002772-12755-SE25",
+            "Nombre": "MANGAS DE COMPRESION MUSLO NEUMATICA S,M,L, / / MANGAS DE COMPRESION VASCULAR HASTA MUSLO S ID: 1002772-97-LR24 (LC,UPC ADULTO, 2204005003,MMC)",
+            "CodigoEstado": 6
+        },
+        {
+            "Codigo": "1002772-12779-SE25",
+            "Nombre": "INSUMOS PARA PATOLOGÍA TRAUMÁTICA DE MANO LIC.1002772-47-LQ25 (LC,PABELLON,2204004004,CMG)",
+            "CodigoEstado": 6
+        },
+        {
+            "Codigo": "1003-179-CM25",
+            "Nombre": "Orden de Compra: 1003-179-CM25",
+            "CodigoEstado": 6
+        }
+    ]
+}

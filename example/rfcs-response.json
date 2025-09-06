@@ -1,0 +1,37 @@
+{
+    "Cantidad": 5,
+    "FechaCreacion": "2025-09-06T18:44:36.7194Z",
+    "Version": "v1",
+    "Listado": [
+        {
+            "CodigoExterno": "1002588-91-LQ25",
+            "Nombre": "Adquisición equipamiento Liceos Técnicos Prof.",
+            "CodigoEstado": 5,
+            "FechaCierre": "2025-09-25T15:00:00"
+        },
+        {
+            "CodigoExterno": "1002588-92-LE25",
+            "Nombre": "Capacitación en herramientas IA INSUCO",
+            "CodigoEstado": 5,
+            "FechaCierre": "2025-09-15T15:00:00"
+        },
+        {
+            "CodigoExterno": "1003473-159-LE25",
+            "Nombre": "CONTRATO DE SUMINISTRO DE SENSORES DE OXÍMETRO DE PULSO PEDIÁTRICO COMPATIBLES CON SISTEMA MASIMO PARA EL HOSPITAL SAN JUAN DE DIOS DE CURICÓ",
+            "CodigoEstado": 5,
+            "FechaCierre": "2025-09-15T15:00:00"
+        },
+        {
+            "CodigoExterno": "1013353-25-LE25",
+            "Nombre": "Adquisición artículos de aseo para los JI y EE.EE",
+            "CodigoEstado": 5,
+            "FechaCierre": "2025-09-10T20:00:00"
+        },
+        {
+            "CodigoExterno": "1019-121-LE25",
+            "Nombre": "CONSTRUCCIÓN DE ESTACIÓN METEOROLÓGICA EN ALTA MON",
+            "CodigoEstado": 5,
+            "FechaCierre": "2025-09-16T16:30:00"
+        }
+    ]
+}
