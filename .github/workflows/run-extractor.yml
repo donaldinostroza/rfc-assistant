@@ -45,21 +45,24 @@ jobs:
           API_TICKET: ${{ secrets.API_TICKET }}
         run: python extractor.py
 
-      # Paso 5: Guardar los cambios en la base de datos de vuelta al repositorio
-      - name: Commit and push if database changed
+      # Paso 5: Generar la página HTML a partir de la base de datos
+      - name: Generate HTML page
+        run: python generate_html.py
+
+      # Paso 6: Guardar los cambios (base de datos y página web) en el repositorio
+      - name: Commit and push changes
         run: |
-          # Configura el autor para los commits que hará el bot
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Añade el archivo de la base de datos al área de preparación (staging)
-          git add licitaciones.db
+          # Añade ambos archivos al área de preparación
+          git add licitaciones.db index.html
           
-          # Revisa si hay cambios en el archivo. Si no hay, no hace nada.
+          # Revisa si hay cambios para commitear
           if git diff --staged --quiet; then
-            echo "No changes in the database to commit."
+            echo "No changes to commit."
           else
-            # Si hay cambios, crea un commit con un mensaje dinámico y lo sube al repositorio
-            git commit -m "Update database with new RFCs for $(date +'%Y-%m-%d')"
+            git commit -m "Update data and web page for $(date +'%Y-%m-%d')"
             git push
           fi
+
