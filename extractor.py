@@ -66,7 +66,7 @@ def save_rfcs(rfcs_list):
             ''', (
                 rfc.get('CodigoExterno'),
                 rfc.get('Nombre'),
-                int(rfc.get('Estado')) if rfc.get('Estado') is not None else None,
+                int(rfc.get('CodigoEstado')) if rfc.get('CodigoEstado') is not None else None,
                 rfc.get('FechaCierre')
             ))
             # cursor.rowcount será 1 si se insertó una nueva fila, 0 si se ignoró.
